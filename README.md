@@ -1,15 +1,15 @@
-📌 Workflow Overview
+**Workflow Overview**
 
-🔹 Trigger
+**Trigger**
 
 Schedule Trigger runs daily at 9:00 AM IST (example in JSON shows 03:30 UTC).
 
-🔹 Lead Collection
+**Lead Collection**
 
 Uses HTTP Request node to fetch leads from a mock API:
 👉 https://jsonplaceholder.typicode.com/users
 
-🔹 Data Processing
+**Data Processing**
 
 A Code (JavaScript) node extracts and cleans required fields:
 
@@ -27,7 +27,7 @@ lead_source = "n8n-internship-assignment"
 
 created_at = today's date (YYYY-MM-DD)
 
-🔹 Storage
+**Storage**
 
 Google Sheets node appends processed leads into a Sheet.
 
@@ -35,7 +35,7 @@ Example columns:
 
 name	email	company	phone	lead_source	created_at
 
-🔹 Notifications
+**Notifications**
 
 (Optional extension) Send a Slack / Telegram / Email notification:
 
@@ -43,17 +43,17 @@ name	email	company	phone	lead_source	created_at
 
 Include a link to the Google Sheet.
 
-🔹 Error Handling
+**Error Handling**
 
 If the workflow fails, an Error Workflow sends an alert email to the admin.
 
-⚙️ Setup Instructions
+**Setup Instructions**
 
 Clone / Import Workflow
 
 Import the provided JSON file into your n8n instance.
 
-Google Sheets Setup
+**Google Sheets Setup**
 
 Create a Google Sheet with headers:
 
